@@ -1,6 +1,34 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@tailwind colors;
+
+
+.cards {
+	height: 100vh;
+	position: relative;
+	overflow: hidden;
+}
+
+.card.current {
+	top: -25px;
+	position: relative;
+}
+
+.card img {
+	border-radius: 12px;
+}
+
+.card.prev {
+	top: -50px;
+	position: relative;
+}
+
+.card.current {}
+
+.card.next {
+	bottom: -20vh;
+}
 
 .sky {
 	background-color: #4ccad8;

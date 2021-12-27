@@ -1,27 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html class="dark">
 
 <head>
   <title>OpenShips</title>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="/index.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
 </head>
 
 <body>
   <div class="dark">
-    <div class="text-black bg-white dark:bg-black dark:text-white">
+    <div class="text-black bg-white dark:bg-primaryBackground dark:text-white">
       <div class="hero flex flex-col justify-between h-screen">
-        <div class="header max-w-3xl px-4 mx-auto sm:px-6 xl:max-w-5xl xl:px-0">
+        <div class="header max-w-4xl px-4 mx-auto sm:px-6 xl:max-w-5xl xl:px-0">
 
           <header class="flex items-center justify-between py-10">
             <div><a href="/">
                 <div class="flex items-center justify-between">
                   <div class="mr-3"><img src="/assets/empty-ship.png" alt="logo" style="width: 50px;"></div>
-                  <div class="hidden h-6 text-2xl font-semibold sm:block">Openships</div>
+                  <div class="text-gray-100 hidden h-6 text-2xl leading-8 font-bold sm:block">Openships</div>
                 </div>
               </a></div>
-            <div class="flex items-center text-base leading-5">
+            <!-- <div class="flex items-center text-base leading-5">
               <div class="hidden sm:block"><a class="p-1 font-medium text-gray-900 dark:text-gray-100 sm:p-4 "
                   href="https://opensea.com/">Opensea</a><a
                   class="p-1 font-medium text-gray-900 dark:text-gray-100 sm:p-4 "
@@ -50,45 +52,81 @@
                   </div>
                 </nav>
               </div>
-            </div>
+            </div> -->
           </header>
         </div>
-        <main class="relative">
+
+
+        <!-- <main class="relative">
           <section class="sky">
             <div class="boat-container"><img src="/assets/empty-ship.png" style="max-width: 240px;"></div>
           </section>
           <section class="sea"></section>
-        </main>
-        <div class="dark:bg-black dark:text-white">
-          <div class="max-w-3xl px-4 py-24 mx-auto sm:px-6 xl:max-w-5xl xl:px-0">
+        </main> -->
+
+
+        <div class="dark:bg-primaryBackground dark:text-white">
+          <div class="max-w-4xl px-4 mx-auto sm:px-6 xl:max-w-5xl xl:px-0">
             <div class="md:grid md:grid-cols-12 md:gap-6">
-              <div class="max-w-xl md:max-w-none md:w-full mx-auto md:col-span-7 lg:col-span-6 md:mt-6">
+              <div class="max-w-xl md:max-w-none md:w-full mx-auto md:col-span-7 lg:col-span-6 md:mt-6 flex flex-col justify-center">
+                <div class="my-2 mb-6 text-2xl leading-8 font-semibold tracking-tight dark:text-gray-500">
+                  Gm, seafaring JPEG merchant.
+                </div> 
                 <div
-                  class="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14 mb-12">
-                  Your new NFT vessel is waiting!</div>
-                <div class="content grid gap-4">
-                  <p>Gm, seafaring JPEG merchant. </p>
-                  <p>Your SOS signal reached our Open Shipyard. You probably don't know us yet. And we can't tell you
-                    much, because we're not located in any central harbor—though you can always reach us at [contract
-                    address].</p>
-                  <p>Whether you know us or not, we've come to help!</p>
-                  <p>Your ship looks damaged, just like ours were. And while a few now reside at a certain yacht club,
-                    nobody makes it on the open waters without getting a little dinged up.</p>
-                  <p>But don't worry, we've built a fleet of [AMOUNT OF NFTs] ships ready to sail the seas flying your
-                    flag.</p>
-                  <p>Whether you're a pirate, merchant or first-time sailor, you can get a vessel you'll proudly call
-                    your own (the only group we don't serve are phishermen).</p>
-                  <p>All it takes is a small contribution of [PRICE] to our humble shipyard.</p>
-                  <p>After pressing the button and minting your vessel, it'll soon arrive at your 0x or .eth address,
-                    ready for you to explore the seas, further trading.</p>Yours sincerely,<br>Worldwide Association
-                  Governing Mainsail Integrity
-                </div>
+                  class="text-2xl font-bold leading-9 text-gray-900 dark:text-gray-100 sm:text-3xl sm:leading-10 md:text-4xl md:leading-14 mb-12">
+                  SOS. Mint an OpenShip to help rescue it from the rough waters.</div>
+                <button class="text-white font-bold py-4 px-4 rounded bg-primary hover:bg-sky-400 w-48">Mint - 10m $SOS</button>
+                <a href="#learn" class="flex items-center my-2 mt-6 text-xl leading-8 font-semibold tracking-tight dark:text-gray-500">
+                  Learn more <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path></svg>
+                </a>
               </div>
               <div
                 class="max-w-xl md:max-w-none md:w-full mx-auto md:col-span-5 lg:col-span-6 mb-8 md:mb-0 md:order-1 mt-10 px-4">
-                <img src="/assets/sos.gif" alt="collection" class="rounded" style="/* zoom: 2; */">
+                <div class="cards flex flex-col justify-around"  data-aos="fade-left">
+                  <div class="card prev">
+                    <img src="assets/sos-1.png" alt="prev card" />
+                  </div>
+                  <div class="card current">
+                    <img src="assets/sos-2.png" alt="curr card" />
+                  </div>
+                  <div class="card next">
+                    <img src="assets/sos-2.png" alt="next card" />
+                  </div>
+                </div>
+
+                <!-- <img src="/assets/sos.gif" alt="collection" class="rounded" style="/* zoom: 2; */"> -->
               </div>
             </div>
+
+            <div class="md:grid md:grid-cols-12 md:gap-6 py-12" id="learn">
+              <div class="max-w-xl md:max-w-none md:w-full mx-auto md:col-span-7 lg:col-span-6 md:mt-6">
+                <!-- <p class="my-2 text-2xl leading-8 font-semibold tracking-tight dark:text-gray-300">Okay, in all
+                  seriousness.</p> -->
+                <h2 class="sm:text-4xl text-4xl leading-8 font-extrabold tracking-tight text-white">Your new NFT vessel is waiting!
+                </h2>
+              </div>
+              <div
+                class="max-w-xl md:max-w-none md:w-full mx-auto md:col-span-5 lg:col-span-6 mb-8 md:mb-0 md:order-1 flex items-center justify-center">
+                  <div class="content grid gap-4">
+                    <p>Your SOS signal reached our Open Shipyard. You probably don't know us yet. And we can't tell you
+                      much, because we're not located in any central harbor—though you can always reach us at [contract
+                      address].</p>
+                    <p>Whether you know us or not, we've come to help!</p>
+                    <p>Your ship looks damaged, just like ours were. And while a few now reside at a certain yacht club,
+                      nobody makes it on the open waters without getting a little dinged up.</p>
+                    <p>But don't worry, we've built a fleet of [AMOUNT OF NFTs] ships ready to sail the seas flying your
+                      flag.</p>
+                    <p>Whether you're a pirate, merchant or first-time sailor, you can get a vessel you'll proudly call
+                      your own (the only group we don't serve are phishermen).</p>
+                    <p>All it takes is a small contribution of [PRICE] to our humble shipyard.</p>
+                    <p>After pressing the button and minting your vessel, it'll soon arrive at your 0x or .eth address,
+                      ready for you to explore the seas, further trading.</p>Yours sincerely,<br>Worldwide Association
+                    Governing Mainsail Integrity
+                  </div>
+              </div>
+            </div>
+
+
             <div class="md:grid md:grid-cols-12 md:gap-6 py-12">
               <div class="max-w-xl md:max-w-none md:w-full mx-auto md:col-span-7 lg:col-span-6 md:mt-6">
                 <p class="my-2 text-2xl leading-8 font-semibold tracking-tight dark:text-gray-300">Okay, in all
@@ -184,7 +222,7 @@
               </ul>
             </div>
           </div>
-          <div class="max-w-3xl px-4 py-10 mx-auto sm:px-6 xl:max-w-5xl xl:px-0">
+          <div class="max-w-4xl px-4 py-10 mx-auto sm:px-6 xl:max-w-5xl xl:px-0">
             <footer class="flex items-center justify-between py-10">
               <p>©2021 OpenShips. All rights reserved.</p>
               <div class="flex items-center text-base leading-5">
@@ -199,6 +237,10 @@
       </div>
     </div>
   </div>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 
 </html>
