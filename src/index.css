@@ -1,13 +1,49 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.sky {
+	background-color: #4ccad8;
+	width: 100vw;
+	height: 40vh;
+	display: grid;
+	grid-template-columns: repeat(3, 33vw);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.sea {
+	background: linear-gradient(rgb(69 112 209), rgb(36 50 118));
+	width: 100vw;
+	height: 50vh;
+	display: grid;
+	grid-template-columns: repeat(3, 33vw);
+	grid-template-rows: 2vh 68vh repeat(5, 100vh);
+}
+
+.header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 2;
+}
+
+.hero {
+	position: relative;
+	width: 100%;
+	height: 90vh;
+	padding: 0 0 0 0;
+}
+
+.boat-container {
+	grid-column: 1;
+	align-self: flex-end;
+	transform: translateX(-10vh) translateY(10vh);
+	animation: boat-sail 50s linear infinite;
+}
+
+@keyframes boat-sail {
+	to {
+		transform: translateX(100vw) translateY(30vw);
+	}
 }
