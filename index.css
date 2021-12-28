@@ -771,22 +771,48 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .cards {
-  height: 100vh;
   position: relative;
+  flex-direction: row;
+  flex-wrap: nowrap;
   animation: 30s ease-in-out infinite alternate filmstrip;
 }
 
 @keyframes filmstrip {
   from {
-    transform: translateY(0);
+    transform: translateX(0);
   } to {
-    transform: translateY(-150vh);
+    transform: translateX(-300vw);
   }
 }
 
 .card {
-  padding-top: 2rem;
+  padding-right: 1rem;
+  flex-shrink: 0;
+  width: 75%;
 }
+
+@media (min-width: 768px) {
+  .cards {
+    height: 100vh;
+    flex-direction: column;
+  }
+  
+  @keyframes filmstrip {
+    from {
+      transform: translateY(0);
+    } to {
+      transform: translateY(-150vh);
+    }
+  }
+
+  .card {
+    padding-right: 0;
+    padding-top: 2rem;
+    flex-shrink: unset;
+    width: 100%;
+  }
+}
+
 
 .sky {
   background-color: #4ccad8;
