@@ -766,31 +766,26 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 @tailwind colors;
 
+.filmstrip-wrapper {
+	overflow: hidden;
+}
+
 .cards {
   height: 100vh;
   position: relative;
-  overflow: hidden;
+  animation: 30s ease-in-out infinite alternate filmstrip;
 }
 
-.card.current {
-  top: -25px;
-  position: relative;
+@keyframes filmstrip {
+  from {
+    transform: translateY(0);
+  } to {
+    transform: translateY(-150vh);
+  }
 }
 
-.card img {
-  border-radius: 12px;
-}
-
-.card.prev {
-  top: -50px;
-  position: relative;
-}
-
-.card.current {
-}
-
-.card.next {
-  bottom: -20vh;
+.card {
+  padding-top: 2rem;
 }
 
 .sky {
