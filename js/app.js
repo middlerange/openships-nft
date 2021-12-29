@@ -24,12 +24,16 @@ const price = 10000000
 const network = 'rinkeby'
 const sos_contract_address = '0xdB995C2189A3adB23b2b0E6Feb59c7b96F5bD8D0'
 const nft_contract_address = '0x302AB627932625a4F64784860f2210a3994FdCa7'
-window.addEventListener('load', async () => {
+document.getElementById('connect_btn').addEventListener('click', async () => {
   total_supply_label = document.getElementById('total_supply_label')
   sale_status = document.getElementById('sale_status')
   mint_btn = document.getElementById('mint_btn')
   approve_spending_btn = document.getElementById('approve_btn')
   if (typeof window.ethereum !== 'undefined') {
+    document.querySelector('.mint').style.display = 'block'
+    document.getElementById('approve_btn').style.display = 'block'
+    document.getElementById('mint_btn').style.display = 'block'
+    document.getElementById('connect_btn').style.display = 'none'
     window.web3instance = new Web3(window.ethereum)
   } else {
     alert(

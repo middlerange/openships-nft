@@ -220,6 +220,12 @@ input[type=number] {
   font-size: 1.25rem;
   line-height: 1;
   font-weight: 700;
+  transition: background-color 200ms ease;
+}
+
+.btn:hover {
+  background-color: #449bcc;
+  opacity: 1;
 }
 
 .filmstrip {
@@ -466,6 +472,10 @@ input[type=number] {
   margin-left: 0.5rem;
 }
 
+.mint {
+  display: none;
+}
+
 .mint__status {
   display: -webkit-box;
   display: -webkit-flex;
@@ -591,10 +601,6 @@ input[type=number] {
     -webkit-transition: background-color 150ms ease;
     transition: background-color 150ms ease;
     font-size: 1.125rem;
-  }
-
-  .btn:hover {
-    background-color: #449bcc;
   }
 
   .filmstrip {
