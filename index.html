@@ -42,7 +42,29 @@
         </div>
         <div class="hero__content">
           <div class="hero__subtitle">Gm, seafaring JPEG merchant.</div>
-          <h1 class="hero__title">SOS. OpenShip's coming soon.</h1>
+          <h1 class="hero__title">SOS. Mint an OpenShip to help rescue it from the rough waters.</h1>
+          <div class="mint">
+            <div class="mint__status">
+              <div id="sale_status" class="sale_status"></div>
+              <div id="total_supply_label" class="total_supply_label"></div>
+            </div>
+            <div class="w-embed w-script">
+              <div class="quantity">
+                <div class="value-button" id="decrease" onclick="decreaseValue()" value="Decrease Value">-</div>
+                <input id="quantity" type="number" value="1" min="1" max="10">
+                <div class="value-button" id="increase" onclick="increaseValue()" value="Increase Value">+</div>
+              </div>
+            </div>
+          </div>
+          <div class="hero__btns">
+            <button id="connect_btn" class="btn w-button">Connect wallet</button>
+            <button id="approve_btn" class="btn w-button" style="display: none;">Approve $SOS</button>
+            <button id="mint_btn" class="btn w-button" style="display: none;">Mint - 10m $SOS</button>
+          </div>
+          <a href="#info" class="hero__learn-more w-inline-block">
+            <div class="hero__subtitle hero__subtitle--small">Learn more</div>
+            <div class="down-chevron w-icon-dropdown-toggle"></div>
+          </a>
         </div>
       </div>
       <div class="hero__right">
@@ -56,6 +78,123 @@
         </div>
       </div>
     </header>
+  </div>
+  <div id="info" class="container container--small">
+    <div class="section">
+      <h2>S.O.S. - Mint an Open Ship to join our league of adventurous navigators.</h2>
+      <p>Avast, matey! &nbsp;Good fortune has brought you here to join our motley crew.</p>
+      <p>You're nothing much to look at, but worry not as our intentions are true. The only way to end this foul curse that has kept us wandering the high seas for centuries is to be kind to strangers such as yourself.<br></p>
+      <p>Know that the waters of web3 can run deep, dark, and cold to the uninitiated. We need brave souls such as you to join us. We only have room for $AMT OF NFTS to join on this quest.<br></p>
+      <p>DYOR before you click that connect wallet you scalawag. 💀 This journey won't be easy. There are untold dangers that lie in wait — sharks, sea creatures, and nuclear blasts.<br></p>
+      <p>Whether you're a pirate, merchant, or first-time sailor, you can get a unique vessel to call your own for a small contribution 💰 to our humble shipyard. <br></p>
+      <p>After pressing the button and minting your vessel, it'll soon arrive at your 0x or .eth address, ready for you to explore the seas and seek your own adventure. <br></p>
+      <p>Higher than the tide,<br>Worldwide Association Governing Mainsail Integrity<br></p>
+    </div>
+    <div class="section">
+      <h3 class="text-center">Okay, in all seriousness.</h3>
+      <h1 class="text-center">What is Open Ships?</h1>
+      <p>Centuries ago, having your own ship (instead of scrubbing the decks on someone else's) gave you the freedom to explore the new world, pack your bags and go anywhere you wanted—just like web3 can give us the freedom to leave centralized web2 platforms and explore better alternatives in a new internet.<br></p>
+      <p>Open Ships is an art project designed to embody decentralization, freedom and an adventurer's spirit—some of web3's core values.<br></p>
+    </div>
+  </div>
+  <div class="container">
+    <div class="section section--grid">
+      <div>
+        <h2>Why $SOS?</h2>
+        <p>The enthusiasm around the $SOS airdrop showed there's a demand for decentralization in the NFT space.<br></p>
+        <p>But decentralization doesn't happen by itself. We have to build it.<br></p>
+        <p>That's why we decided to create one of the first NFT drops which only accepts $SOS for minting.<br></p>
+        <p>Your Open Ship NFT will still be secured by the Ethereum blockchain.<br></p>
+      </div>
+      <div>
+        <h2>What's the Roadmap?</h2>
+        <p>We see Open Ships as an art project, something you love to own because it embodies values you and your work stand for.<br></p>
+        <p>As such, we don't have a roadmap, although you're free to build a community, create derivative art or use the ships you own in any way you want!<br></p>
+      </div>
+    </div>
+  </div>
+  <div class="container container--small">
+    <div class="section">
+      <h2 class="text-center">Who are we?</h2>
+      <div class="team">
+        <div class="team__member">
+          <img src="images/ape.jpeg" loading="lazy" alt="" class="team__pfp">
+          <span>EO</span>
+        </div>
+        <div class="team__member">
+          <img src="images/ape.jpeg" loading="lazy" alt="" class="team__pfp">
+          <span>EO</span>
+        </div>
+        <div class="team__member">
+          <img src="images/ape.jpeg" loading="lazy" alt="" class="team__pfp">
+          <span>EO</span>
+        </div>
+        <div class="team__member">
+          <img src="images/ape.jpeg" loading="lazy" alt="" class="team__pfp">
+          <span>EO</span>
+        </div>
+        <div class="team__member">
+          <img src="images/ape.jpeg" loading="lazy" alt="" class="team__pfp">
+          <span>EO</span>
+        </div>
+        <div class="team__member">
+          <img src="images/ape.jpeg" loading="lazy" alt="" class="team__pfp">
+          <span>EO</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <h2 class="text-center">Frequently asked questions</h2>
+    <div class="section section--grid section--grid-condensed">
+      <details class="faq">
+        <summary class="faq__question">
+          <span>When is the mint?</span>
+          <div class="w-icon-dropdown-toggle"></div>
+        </summary>
+        <div class="faq__answer-container">
+          <p class="faq__answer">Dec 29th, 2021 at 6PM CT</p>
+        </div>
+      </details>
+      <details class="faq">
+        <summary class="faq__question">
+          <span>What am i buying when i buy an OpenShips NFT?</span>
+          <div class="w-icon-dropdown-toggle"></div>
+        </summary>
+        <div class="faq__answer-container">
+          <p class="faq__answer">TBD</p>
+        </div>
+      </details>
+      <details class="faq">
+        <summary class="faq__question">
+          <span>What is the price of a OpenShip?</span>
+          <div class="w-icon-dropdown-toggle"></div>
+        </summary>
+        <div class="faq__answer-container">
+          <p class="faq__answer">TBD</p>
+        </div>
+      </details>
+      <details class="faq">
+        <summary class="faq__question">
+          <span>What charities are being donated to?</span>
+          <div class="w-icon-dropdown-toggle"></div>
+        </summary>
+        <div class="faq__answer-container">
+          <p class="faq__answer">X% of net proceeds will go to ---</p>
+        </div>
+      </details>
+    </div>
+    <footer class="footer">
+      <div>&copy;2021 OpenShips. All rights reserved.<br></div>
+      <div class="footer__links">
+        <div class="footer__link-container">
+          <a href="https://twitter.com" target="_blank" class="footer__link">Twitter</a><br>
+        </div>
+        <div class="footer__link-container">
+          <a href="https://discord.com" target="_blank" class="footer__link">Discord</a><br>
+        </div>
+      </div>
+    </footer>
   </div>
   <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=61ca9d25f926e27f8e340185" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.5.2/web3.min.js" integrity="sha512-mYc+D+NmmyR0Gcrzyae7q5HguBCS4cBHAsIk7gGhu0/ZyGg4z2YZDjyR2YQA/IMCMTNs4mnlw3vVdERzewpekQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
