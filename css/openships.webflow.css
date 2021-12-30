@@ -26,8 +26,9 @@ h2 {
 }
 
 h3 {
-  margin-top: 20px;
-  margin-bottom: 10px;
+  margin-top: 2rem;
+  margin-bottom: 1.25rem;
+  color: #fff;
   font-size: 1.5rem;
   font-weight: 700;
 }
@@ -51,8 +52,13 @@ a {
   color: #8d8d8d;
 }
 
-a:hover {
+a:hover,
+a:focus-visible {
   opacity: 0.8;
+}
+
+strong {
+  color: #c7c7c7;
 }
 
 .container {
@@ -66,6 +72,12 @@ a:hover {
 
 .container.container--small {
   max-width: 45em;
+}
+
+.subtitle {
+  margin-top: 1.25rem;
+  margin-bottom: .625rem;
+  color: inherit;
 }
 
 .hero {
@@ -225,7 +237,8 @@ input[type=number] {
   transition: background-color 200ms ease;
 }
 
-.btn:hover {
+.btn:hover,
+.btn:focus-visible {
   background-color: #449bcc;
   opacity: 1;
 }
@@ -373,7 +386,8 @@ input[type=number] {
   position: relative;
 }
 
-.faq__question:hover {
+.faq__question:hover,
+.faq__question:focus-visible {
   background-color: #373737;
   cursor: pointer;
 }
@@ -381,7 +395,6 @@ input[type=number] {
 .faq[open] .faq__question {
   border-bottom-left-radius: 0rem;
   border-bottom-right-radius: 0rem;
-  background-color: #333;
 }
 
 .faq__answer-container {
