@@ -1,5 +1,5 @@
 body {
-  background-color: #252525;
+  background-color: #222222;
   font-family: Inter, sans-serif;
   color: #8d8d8d;
   font-size: 1rem;
@@ -36,6 +36,7 @@ p {
   margin-bottom: 1rem;
   font-size: 1.0625rem;
   font-weight: 400;
+  line-height: 1.6;
 }
 
 p:last-of-type {
@@ -47,6 +48,7 @@ a {
   -webkit-transition: opacity 200ms ease;
   transition: opacity 200ms ease;
   text-decoration: underline;
+  color: #8d8d8d;
 }
 
 a:hover {
@@ -437,11 +439,6 @@ input[type=number] {
 
 .footer__link-container {
   padding-left: 2rem;
-}
-
-.footer__link {
-  color: #8d8d8d;
-  text-decoration: underline;
 }
 
 .hero__btns {
