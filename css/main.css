@@ -263,7 +263,16 @@
 	animation: fadeinBottom 0.5s, fadeoutBottom 0.5s 2.5s;
 }
 
-/* #ships .token { */
+@media screen and (max-width: 549px) {
+	#ships {
+		justify-content: center;
+		margin: 40px 0 120px;
+	}
+
+	#ships .token {
+		width: 300px;
+	}
+}
 
 
 @-webkit-keyframes fadeinBottom {
