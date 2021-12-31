@@ -240,7 +240,7 @@ async function approve_spending(contract, wallet) {
         if (error) {
           alert(error.message);
         } else {
-          alert("Transaction initiated.");
+          window.showToast("Transaction initiated.");
         }
       }
     );

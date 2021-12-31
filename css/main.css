@@ -171,3 +171,141 @@
 		opacity: 0;
 	}
 }
+
+#loading {
+	font-size: 14px;
+	color: #bbb;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 70vh;
+	text-align: center;
+}
+
+#ships {
+	display: flex;
+	flex-wrap: wrap;
+	grid-gap: 1rem;
+	gap: 1rem;
+	min-height: 70vh;
+}
+
+#ships .token {
+	display: flex;
+	width: 300px;
+	flex-direction: column;
+	position: relative;
+}
+
+#ships .token .token-info {
+	font-size: 22px;
+	font-weight: 500;
+	color: #fff
+}
+
+#ships .token-image {
+	min-width: 300px;
+	min-height: 300px;
+	border-radius: 5px;
+	background-color: #555;
+	margin: 10px 0;
+}
+
+#ships .token-image img {
+	width: 100%;
+	border-radius: 5px;
+}
+
+.flex {
+	display: flex;
+}
+
+.items-center {
+	align-items: center;
+}
+
+.ml-2 {
+	margin-left: 8px
+}
+
+.token-content {
+	position: relative;
+}
+
+.token-btn {
+	padding: 6px 8px;
+	border-radius: 5px;
+	/* border: 1px solid #444; */
+	background: rgb(0 0 0 / 39%);
+	position: absolute;
+	bottom: 15px;
+	left: 50%;
+	font-size: 12px;
+	transform: translate(-50%, -50%);
+	cursor: pointer;
+	text-decoration: none;
+	box-shadow: 0 1px 3px rgb(0 0 0 / 50%);
+	visibility: hidden;
+	opacity: 0;
+	display: none;
+}
+
+.token:hover .token-btn,
+.token:hover .token-btn {
+	visibility: visible;
+	opacity: 1;
+	display: flex;
+	animation: fadeinBottom 0.5s, fadeoutBottom 0.5s 2.5s;
+}
+
+/* #ships .token { */
+
+
+@-webkit-keyframes fadeinBottom {
+	from {
+		bottom: 0;
+		opacity: 0;
+	}
+
+	to {
+		bottom: 15px;
+		opacity: 1;
+	}
+}
+
+@keyframes fadeinBottom {
+	from {
+		bottom: 0;
+		opacity: 0;
+	}
+
+	to {
+		bottom: 15px;
+		opacity: 1;
+	}
+}
+
+
+@-webkit-keyframes fadeoutBottom {
+	from {
+		bottom: 15px;
+		opacity: 1;
+	}
+
+	to {
+		bottom: 0;
+		opacity: 0;
+	}
+}
+
+@keyframes fadeoutBottom {
+	from {
+		bottom: 15px;
+		opacity: 1;
+	}
+
+	to {
+		bottom: 0;
+		opacity: 0;
+	}
+}
