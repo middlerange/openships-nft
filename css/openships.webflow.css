@@ -362,6 +362,10 @@ input[type=number] {
   flex: 0 auto;
 }
 
+.team__member a {
+  text-decoration: none;
+}
+
 .team__pfp {
   margin-bottom: 0.5rem;
   border-radius: 50%;
