@@ -192,7 +192,7 @@
 
 #ships .token {
 	display: flex;
-	width: 300px;
+	width: 250px;
 	flex-direction: column;
 	position: relative;
 }
@@ -204,8 +204,8 @@
 }
 
 #ships .token-image {
-	min-width: 300px;
-	min-height: 300px;
+	min-width: 250px;
+	min-height: 250px;
 	border-radius: 5px;
 	background-color: #555;
 	margin: 10px 0;
@@ -245,6 +245,11 @@
 	cursor: pointer;
 	text-decoration: none;
 	box-shadow: 0 1px 3px rgb(0 0 0 / 50%);
+	width: 160px;
+	width: 150px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	visibility: hidden;
 	opacity: 0;
 	display: none;
