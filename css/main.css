@@ -1,0 +1,173 @@
+.logo__image {
+	height: 60px;
+	width: 50px;
+}
+
+.brand-container {
+	text-decoration: none;
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+}
+
+.brand-container:hover {
+	opacity: 0.9;
+}
+
+.wallet-link {
+	text-transform: uppercase;
+	font-size: 12px;
+	text-decoration: none;
+	cursor: pointer;
+	border-radius: 10px;
+}
+
+#wallet {
+	font-size: 12px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-left: 30px;
+	padding: 6px 15px;
+	border: 1px solid #555;
+	border-radius: 6px;
+	position: relative;
+}
+
+#wallet .dropdown,
+#wallet svg,
+#wallet .divider {
+	display: none !important;
+}
+
+#wallet.open .dropdown,
+#wallet.open svg,
+#wallet.open .divider {
+	display: block !important;
+}
+
+#wallet .dropdown {
+	visibility: hidden;
+	opacity: 0;
+	display: none;
+	min-width: 5rem;
+	position: absolute;
+	transition: all 0.5s ease;
+	margin-left: 0;
+	padding-left: 0;
+	left: 0;
+	top: 0;
+	width: 100%;
+	margin-top: 28px;
+	border-top: none;
+	box-sizing: content-box;
+	margin-left: -1px;
+	margin-bottom: 0;
+	border: 1px solid #555;
+	border-top: none;
+	border-radius: 0px;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	padding: 5px 0;
+}
+
+
+#wallet .divider {
+	width: 1px;
+	height: 14px;
+	margin: 0 10px;
+	background: rgb(255, 255, 255);
+	opacity: 0.3;
+}
+
+#wallet .dropdown li {
+	margin: 0;
+	cursor: pointer;
+	list-style: none;
+	padding: 5px 10px;
+}
+
+#wallet .dropdown li a {
+	text-decoration: none;
+}
+
+#wallet:hover>.dropdown,
+#wallet:focus-within>.dropdown,
+#wallet .dropdown:hover,
+#wallet .dropdown:focus {
+	visibility: visible;
+	opacity: 1;
+	display: block;
+}
+
+#snackbar {
+	visibility: hidden;
+	min-width: 250px;
+	max-width: 600px;
+	background-color: #333;
+	color: #fff;
+	text-align: center;
+	border-radius: 2px;
+	padding: 16px;
+	position: fixed;
+	z-index: 1;
+	left: 50%;
+	top: 130px;
+	transform: translate(-50%, -50%);
+	box-shadow: 0 1px 3px rgb(0 0 0 / 50%);
+}
+
+
+#snackbar.show {
+	visibility: visible;
+	-webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+	animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+	from {
+		top: 100px;
+		opacity: 0;
+	}
+
+	to {
+		top: 130px;
+		opacity: 1;
+	}
+}
+
+@keyframes fadein {
+	from {
+		top: 100px;
+		opacity: 0;
+	}
+
+	to {
+		top: 130px;
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes fadeout {
+	from {
+		top: 100px;
+		opacity: 1;
+	}
+
+	to {
+		top: 50px;
+		opacity: 0;
+	}
+}
+
+@keyframes fadeout {
+	from {
+		top: 100px;
+		opacity: 1;
+	}
+
+	to {
+		top: 50px;
+		opacity: 0;
+	}
+}
