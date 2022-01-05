@@ -107,7 +107,7 @@ strong {
 	-ms-flex-align: center;
 	align-items: center;
 	grid-auto-columns: 1fr;
-	grid-column-gap: 10rem;
+	grid-column-gap: 8rem;
 	-ms-grid-columns: 1.5fr 0.75fr;
 	grid-template-columns: 1.5fr 0.75fr;
 	-ms-grid-rows: auto;
