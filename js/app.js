@@ -8,7 +8,7 @@ function getDisplayAddress(address) {
 // Number input counter
 function increaseValue() {
   var value = parseInt(document.getElementById("quantity").value);
-  if (value >= 10) return;
+  if (value >= 20) return;
   document.getElementById("quantity").setAttribute("value", value + 1);
 }
 
@@ -16,6 +16,22 @@ function decreaseValue() {
   var value = parseInt(document.getElementById("quantity").value);
   if (value <= 1) return;
   document.getElementById("quantity").setAttribute("value", value - 1);
+}
+
+const showMintBtns = () => {
+  document.querySelector(".mint").style.display = "block";
+  document.getElementById("approve_btn").style.display = "block";
+  document.getElementById("mint_sos_btn").style.display = "block";
+  document.getElementById("mint_eth_btn").style.display = "block";
+  document.getElementById("connect_btn").style.display = "none";
+}
+
+const hideMintBtns = () => {
+  document.querySelector(".mint").style.display = "none";
+  document.getElementById("approve_btn").style.display = "none";
+  document.getElementById("mint_sos_btn").style.display = "none";
+  document.getElementById("mint_eth_btn").style.display = "none";
+  document.getElementById("connect_btn").style.display = "block";
 }
 
 // Web3
@@ -94,11 +110,8 @@ const connectWallet = async () => {
   approve_spending_btn = document.getElementById("approve_btn");
 
   if (typeof window.ethereum !== "undefined") {
-    document.querySelector(".mint").style.display = "block";
-    document.getElementById("approve_btn").style.display = "block";
-    document.getElementById("mint_sos_btn").style.display = "block";
-    document.getElementById("mint_eth_btn").style.display = "block";
-    document.getElementById("connect_btn").style.display = "none";
+    await signIn();
+    showMintBtns();
     window.web3instance = new Web3(window.ethereum);
   } else {
     window.showToast(
@@ -129,7 +142,7 @@ const connectWallet = async () => {
       sos_contract = loaded_contract;
     });
   } catch (err) {
-    alert(err);
+    window.showToast(err);
     return;
   }
 
@@ -138,7 +151,7 @@ const connectWallet = async () => {
       nft_contract = loaded_contract;
     });
   } catch (err) {
-    alert(err);
+    window.showToast(err);
     return;
   }
 
@@ -147,7 +160,7 @@ const connectWallet = async () => {
       total_supply_label.innerHTML = totalSupply + "/" + 5555 + " minted";
     });
   } catch (err) {
-    alert(err);
+    window.showToast(err);
     return;
   }
   try {
@@ -155,7 +168,7 @@ const connectWallet = async () => {
       public_sale_active = response;
     });
   } catch (err) {
-    alert(err);
+    window.showToast(err);
     return;
   }
   if (public_sale_active == true) {
@@ -165,7 +178,7 @@ const connectWallet = async () => {
   }
   mint_sos_btn.addEventListener("click", function () {
     if (public_sale_active == false) {
-      alert("Sales are currently disabled, please check back again later.");
+      window.showToast("Sales are currently disabled, please check back again later.");
     } else {
       if (wallet != null) {
         var quantity = document.getElementById("quantity").value;
@@ -179,7 +192,7 @@ const connectWallet = async () => {
   });
   mint_eth_btn.addEventListener("click", function () {
     if (public_sale_active == false) {
-      alert("Sales are currently disabled, please check back again later.");
+      window.showToast("Sales are currently disabled, please check back again later.");
     } else {
       if (wallet != null) {
         var quantity = document.getElementById("quantity").value;
@@ -193,7 +206,7 @@ const connectWallet = async () => {
   });
   approve_spending_btn.addEventListener("click", function () {
     if (public_sale_active == false) {
-      alert("Sales are currently disabled, please check back again later.");
+      window.showToast("Sales are currently disabled, please check back again later.");
     } else {
       if (wallet != null) {
         var quantity = document.getElementById('quantity').value
@@ -236,7 +249,7 @@ async function getPublicSaleActive(contract) {
 
 async function signIn() {
   const getWallet = await window.ethereum.enable().catch(function (error) {
-    alert(error.message);
+    window.showToast(error.message);
     throw error;
   });
   wallet = getWallet[0];
@@ -257,14 +270,14 @@ async function approve_spending(contract, wallet,quantity) {
       },
       function (error, txhash) {
         if (error) {
-          alert(error.message);
+          window.showToast(error.message);
         } else {
           window.showToast("Transaction initiated.");
         }
       }
     );
   } catch (err) {
-    alert(err.message);
+    window.showToast(err.message);
   }
 }
 
@@ -285,14 +298,14 @@ async function mintWithSos(contract, number_of_tokens, wallet) {
       },
       function (error, txhash) {
         if (error) {
-          alert(error.message);
+          window.showToast(error.message);
         } else {
-          alert("Transaction initiated.");
+          window.showToast("Transaction initiated.");
         }
       }
     );
   } catch (err) {
-    alert(err.message);
+    window.showToast('Not enough $SOS. Please approve $SOS spending first.');
   }
 }
 
@@ -312,13 +325,13 @@ async function mintWithEth(contract, number_of_tokens, wallet) {
       },
       function (error, txhash) {
         if (error) {
-          alert(error.message)
+          window.showToast(error.message)
         } else {
-          alert('Transaction initiated.')
+          window.showToast('Transaction initiated.')
         }
       }
     )
   } catch (err) {
-    alert(err.message)
+    window.showToast(err.message)
   }
 }
