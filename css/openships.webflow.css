@@ -78,6 +78,11 @@ strong {
 	color: #c7c7c7;
 }
 
+button:disabled,
+button:disabled:hover {
+	opacity: 0.4;
+}
+
 .container {
 	width: 100%;
 	max-width: 70em;
