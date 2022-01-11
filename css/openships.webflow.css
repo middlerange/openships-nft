@@ -158,10 +158,11 @@ button:disabled:hover {
 	font-size: 1.875rem;
 	font-weight: 700;
 	letter-spacing: -0.0625rem;
+	transform: translateY(0.05rem);
 }
 
 .logo__image {
-	width: 3rem;
+	width: 2.75rem;
 	margin-right: 0.825rem;
 }
 
